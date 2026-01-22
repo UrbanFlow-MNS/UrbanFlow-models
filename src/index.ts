@@ -9,4 +9,7 @@ export * from './user/enums/user-role.enum';
 export * from './utils/date.utils';
 export * from './utils/rpc-validation.pipe';
 export * from './monitoring/dtos/dataLogs.body';
+export * from './monitoring/dtos/externalApi.body';
+export * from './monitoring/dtos/microservice.body';
+export * from './monitoring/dtos/serverDatastamp.body';
 

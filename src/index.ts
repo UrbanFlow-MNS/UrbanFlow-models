@@ -5,4 +5,5 @@ export * from './logs/events/log-event.enum';
 export * from './user/body/user.body';
 export * from './user/dtos/user.dto';
 export * from './user/enums/user-role.enum';
-
+export * from './utils/date.utils';
+export * from './utils/rpc-validation.pipe';

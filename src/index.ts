@@ -8,4 +8,5 @@ export * from './user/dtos/user.dto';
 export * from './user/enums/user-role.enum';
 export * from './utils/date.utils';
 export * from './utils/rpc-validation.pipe';
+export * from './monitoring/dtos/dataLogs.body';
 

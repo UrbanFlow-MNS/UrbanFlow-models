@@ -1,6 +1,11 @@
+import {ApiProperty} from "@nestjs/swagger";
+
 export class LogBody {
+    @ApiProperty()
     microserviceName: string
+    @ApiProperty()
     codeOfEvent: string
+    @ApiProperty()
     event: string
     createdAt: Date;
 

@@ -1,6 +1,6 @@
 {
   "name": "@bato-urbanflow/urbanflow-models",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -13,6 +13,7 @@
   "dependencies": {
     "@nestjs/common": "^11.1.12",
     "@nestjs/microservices": "^11.1.12",
+    "@nestjs/swagger": "^11.2.5",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.3",
     "typeorm": "^0.3.28",

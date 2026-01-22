@@ -1,6 +1,6 @@
 import {ApiProperty} from "@nestjs/swagger";
 
-export class DataLogsDto {
+export class DataLogsBody {
 
     @ApiProperty()
     isApi : boolean;

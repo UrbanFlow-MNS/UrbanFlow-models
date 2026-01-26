@@ -1,10 +1,11 @@
 import {ApiProperty} from "@nestjs/swagger";
+import {Timestamp} from "typeorm";
 
 export class ServerDatastampBody {
     @ApiProperty()
     serverName: string;
     @ApiProperty()
-    timestamp: string;
+    timestamp: Timestamp;
     @ApiProperty()
     cpuPercent: number;
     @ApiProperty()
@@ -14,7 +15,7 @@ export class ServerDatastampBody {
     @ApiProperty()
     internalTemp:number;
 
-    constructor(serverName:string, timestamp:string, cpuPercent:number, gpuPercent:number, ramUsage:number, internalTemp:number) {
+    constructor(serverName:string, timestamp:Timestamp, cpuPercent:number, gpuPercent:number, ramUsage:number, internalTemp:number) {
         this.serverName = serverName;
         this.timestamp = timestamp;
         this.cpuPercent = cpuPercent;

@@ -1,40 +1,48 @@
-import { IsEmail, IsEnum, IsNumber, IsOptional, IsString } from 'class-validator';
-import { UserRoleType } from '../enums/user-role.enum';
+import {
+    IsEmail,
+    IsEnum,
+    IsNumber,
+    IsOptional,
+    IsString,
+} from "class-validator";
+import { UserRoleType } from "../enums/user-role.enum";
 
 export class UserDto {
-
     @IsNumber()
-    @IsOptional() 
+    @IsOptional()
     id?: number;
 
     @IsString()
     @IsOptional()
     firstName?: string;
 
-    @IsString() 
-    @IsOptional() 
+    @IsString()
+    @IsOptional()
     lastName?: string;
 
-    @IsEmail() 
-    @IsOptional() 
+    @IsEmail()
+    @IsOptional()
     email?: string;
-    
-    @IsEnum(UserRoleType) 
-    @IsOptional() 
+
+    @IsEnum(UserRoleType)
+    @IsOptional()
     role?: UserRoleType;
 
-    @IsString() 
-    @IsOptional() 
+    @IsString()
+    @IsOptional()
     accessToken?: string;
 
-    @IsString() 
-    @IsOptional() 
+    @IsString()
+    @IsOptional()
     refreshToken?: string;
+
+    @IsNumber()
+    @IsOptional()
+    agencyId?: number;
 
     constructor(partial?: Partial<UserDto>) {
         if (partial) {
             Object.assign(this, partial);
         }
     }
-    
 }

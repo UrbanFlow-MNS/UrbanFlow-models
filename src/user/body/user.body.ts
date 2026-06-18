@@ -1,4 +1,4 @@
-import { IsEmail, IsEnum, IsNotEmpty, IsString, Matches, MinLength } from "class-validator";
+import { IsEmail, IsEnum, IsNotEmpty, IsNumber, IsOptional, IsString, Matches, MinLength } from "class-validator";
 import { UserRoleType } from "../enums/user-role.enum";
 
 export class UserSignInBody {
@@ -39,18 +39,24 @@ export class UserSignUpBody extends UserSignInBody {
     @IsEnum(UserRoleType)
     role: UserRoleType;
 
+    @IsNumber()
+    @IsOptional()
+    agencyId?: number;
+
     constructor(
         firstName: string,
         lastName: string,
         email: string,
         password: string,
-        role: UserRoleType
+        role: UserRoleType,
+        agencyId?: number
     ) {
         super(email, password)
         this.firstName = firstName
         this.lastName = lastName
         this.password = password
         this.role = role
+        this.agencyId = agencyId
     }
 
 }
